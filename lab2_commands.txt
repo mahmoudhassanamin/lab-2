@@ -1,0 +1,68 @@
+
+1- Create a new project on your local machine,
+then push it your remote repo.
+
+-git init
+-git add *
+-git commit -m "new project"
+-git branch -M main
+-git remote add origin <ssh link>
+-git push -u origin main
+
+2- Create two branches (dev & test) then create one
+file on each branch, and push this changes to the remote repo.
+
+-git checkout -b dev
+-git add dev <===== file name
+-git checkout main
+-git checkout -b test
+-git add test<===== file name
+-git push -u origin test
+-git push -u origin dev
+
+3-Merge this changes on Main branch and then push it to your
+remote main branch.
+-git checkout main
+-git merge --no-ff dev -m "merging 1"
+-git merge --no-ff test-m "merging 2"
+-git push
+
+4- Tell me how to remove them locally and remotely.
+
+locally
+-git branch -D test
+-git branch -D dev
+remotely
+git push origin :dev
+git push origin :test
+
+5- Tell me how to checkout another branch without commit
+changes 
+
+-git stash save "my_stash"
+-git checkout main <====== any branch
+
+6-Create an annotated tag with tagname (v1.7) .
+
+-git checkout main
+-git tag -a v1.7 -m "Version 1.7"
+
+7-Push it to the remote repository
+
+-git push --tag
+
+
+8- Tell me how to list tags.
+
+-git tag
+
+9- Tell me how to delete tag locally and remotely.
+
+locally
+-git tag -d v1.7
+remotely
+-git push --delete origin v1.7
+
+10- Add an image in the README.md file.
+- goto github > Issues > new issue > darg and drop your pic on write box then copy link > open README.md > edit this file and past the link of pic > click on preview
+
